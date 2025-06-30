@@ -13,29 +13,35 @@ sender_email = "er.shyamjeet@gmail.com"
 sender_password = ""  # App Password
 
 def sendMail(recipient):
-    subject = "QA automation || 10 Years || PAN INDIA || LWD 20th June 2025"
+    subject = "QA automation || 10 Years || PAN INDIA || LWD 11th Jul 2025"
     body = """
     Hi,
     
-    I hope this message finds you well.
-    I am writing to express my interest in QA Automation opportunities. With over 10 years of experience in automation testing, I have successfully delivered high-quality testing solutions across web, mobile, and API platforms.
-    My core expertise includes:
-        ✔️ Java, Selenium WebDriver, TestNG, Cucumber (BDD)  
-        ✔️ Mobile Testing using Appium, and BrowserStack  
-        ✔️ API Testing with REST Assured, Postman  
-        ✔️ CI/CD integration with Maven, Jenkins, Git  
-        ✔️ Agile/Scrum projects using Jira and Azure DevOps,AWS and GCP
-    I am currently exploring challenging roles as a Senior QA Engineer / QA Automation Lead, where I can contribute to building scalable automation frameworks and a quality-first engineering culture.
+    I am looking for qa automation jobs in noida,gurgoan and delhi location, also join with same CTC.
+
+    Full Name: Shyamjeet Kumar Sharma
+    Contact Number: 8826700171
+    Email ID: er.shyamjeet@gmail.com
+    Date of Birth (DOB): 13/08/1990
+    Current Location: Hyderabad
+    Preferred Location:Hyderabad, Noida, Gurugram, Delhi NCR and Remote
+    Current Working Mode :  Hybrid
+    Total Experience: 10+ Years
+    Relevant Experience: 10 Years
+    Number of Projects Completed: 12 (Domains: Health & Banking)
+    Current Organization: Backbase
+    Current Designation: Senior QA Automation Engineer
+    Current CTC: ₹36 LPA
+    Expected CTC: join with same CTC
+    Official Notice Period: 2–3 weeks (flexible depending on project ramp-down)
+    Offers in Hand: No
+    LinkedIn Profile Link: https://www.linkedin.com/in/shyamjeetkumarsharma/
+    Employment Type: Permanent 
+    Any Interviews/Offers in Pipeline: No
+    Documents Available (Y/N): Yes – Offer Letters, Pay Slips, Relieving Letters, Bank Statements
     
-    Please find my updated resume attached. I would be grateful if you could consider me for any relevant opportunities and keep me informed of any openings that align with my profile.
     
-    Feel free to contact me at 8826700171 or er.shyamjeet@gmail.com.
-    
-    I am available for immediate joining or with a negotiable notice period.
-    
-    Thank you for your time and consideration.
-    
-    Best regards,  
+    Thanks,  
     Shyamjeet Sharma
     """
     # Create EmailMessage object
@@ -68,6 +74,10 @@ def sendMail(recipient):
 
 # Example usage
 recipients = read_recipients('/Volumes/Personal/python/Interview/Program/recipients.txt')
+
 for recipient in recipients:
-    sendMail(recipient)
-    print(recipient)
+    try:
+        sendMail(recipient)
+        print(recipient)
+    except Exception as e:
+        print(f"Error sending to {recipient}: {e}")
