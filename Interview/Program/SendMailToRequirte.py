@@ -10,7 +10,7 @@ def read_recipients(file_path):
 
 #login
 sender_email = "er.shyamjeet@gmail.com"
-sender_password = "vsxrgzaaibrlptjo"  # App Password
+sender_password = ""  # App Password
 
 def sendMail(recipient):
     subject = "QA automation || 10 Years || PAN INDIA || LWD 20th June 2025"
@@ -47,6 +47,7 @@ def sendMail(recipient):
 
     # Attach a file
     file_path = "/Volumes/Personal/python/Interview/Program/Shyamjeet_backbase.pdf"
+    #file_path = "/Volumes/Personal/python/Interview/Program/Qa automation Java Web and APIs testing.pdf"
     file_name = file_path.split("/")[-1] 
     # Detect MIME type
     mime_type, _ = mimetypes.guess_type(file_path)
@@ -69,3 +70,4 @@ def sendMail(recipient):
 recipients = read_recipients('/Volumes/Personal/python/Interview/Program/recipients.txt')
 for recipient in recipients:
     sendMail(recipient)
+    print(recipient)
